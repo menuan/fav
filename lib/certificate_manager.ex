@@ -1,13 +1,15 @@
 defmodule FirebaseAuthVerifier.CertificateManager do
   @moduledoc """
-  A SourceSigner that caches the `Joken.Signer`s accord to
-  the max-age of the cache header on the response.
+  A SourceSigner that caches the [`Joken.Signer(s)`](`Joken.Signer`) according to
+  the max-age of the cache header of the response.
 
   Done according to:
   https://firebase.google.com/docs/auth/admin/verify-id-tokens#verify_id_tokens_using_a_third-party_jwt_library
   """
 
   use GenServer
+
+  @type t :: __MODULE__
 
   @behaviour FirebaseAuthVerifier.SignerSource
 
@@ -17,7 +19,7 @@ defmodule FirebaseAuthVerifier.CertificateManager do
   end
 
   @doc """
-  Get the `Joken.Signers` built from Google's signing certificate(s),
+  Get the `Joken.Signer`s built from Google's signing certificate(s),
   returned as a map with the ID as the key.
   """
   @impl true

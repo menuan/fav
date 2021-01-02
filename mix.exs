@@ -39,6 +39,9 @@ defmodule FirebaseAuthVerifier.MixProject do
   defp description() do
     """
     A small library for verifying FirebaseAuth ID tokens.
+
+    See Firebase documention:
+    https://firebase.google.com/docs/auth/admin/verify-id-tokens#verify_id_tokens_using_a_third-party_jwt_library
     """
   end
 

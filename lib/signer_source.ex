@@ -1,5 +1,10 @@
 defmodule FirebaseAuthVerifier.SignerSource do
-  @moduledoc "The behaviour of a SignerSource"
+  @moduledoc "The behaviour of a `SignerSource`."
+
+  @typedoc """
+  Any type that adopts this behaviour, such as `FirebaseAuthVerifier.CertificateManager`.
+  """
+  @type t :: __MODULE__
 
   @doc """
   Expects to return a map with the `Joken.Signer`'s ID as a key.
