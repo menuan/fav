@@ -6,3 +6,7 @@ config :junit_formatter,
   report_dir: "./test-results",
   print_report_file: true,
   prepend_project_name?: true
+
+# Configure Tesla for the tests
+config :tesla,
+  adapter: Tesla.Adapter.Mint

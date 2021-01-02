@@ -1,5 +1,11 @@
 # Changelog of FirebaseAuthVerifier
 
+## 0.2.0
+
+* Removed runtime dependency on `:hackney`, it is up to the consumer to choose the dependency and the corresponding adapter.
+* Removed default config to use the hackney adapter.
+* Only install `:mint`, `:ca_store` and `:hammox` for the test environment.
+
 ## 0.1.0
 
 First version. Features included are:

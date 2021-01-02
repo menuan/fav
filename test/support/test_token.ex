@@ -16,6 +16,13 @@ defmodule FirebaseAuthVerifier.TestToken do
       password: password,
       returnSecureToken: true,
     }
-    post("/verifyPassword?key=#{web_api_key}", body)
+    case post("/verifyPassword?key=#{web_api_key}", body) do
+      {:ok, %Tesla.Env{status: 200, body: body}} ->
+        {:ok, body}
+      {:ok, %Tesla.Env{status: 400, body: body}} ->
+        {:error, body}
+      error ->
+        error
+    end
   end
 end

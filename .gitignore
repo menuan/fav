@@ -26,3 +26,4 @@ firebase_auth_verifier-*.tar
 *#*
 test-results/*.xml
 .projectile
+**/*.test.env
